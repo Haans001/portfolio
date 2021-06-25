@@ -1,7 +1,8 @@
 .hamburger {
-  @apply w-10 relative;
+  @apply w-10 absolute right-0;
   cursor: pointer;
   height: 14px;
+  top: 5px;
 
   span {
     @apply w-full bg-white absolute left-0;

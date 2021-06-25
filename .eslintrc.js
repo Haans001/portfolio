@@ -19,5 +19,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': 0,
     'import/no-unresolved': 0,
+    'react/jsx-props-no-spreading': 0,
+    'jsx-a11y/control-has-associated-label': 0,
   },
 };

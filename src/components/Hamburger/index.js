@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Hamburger = () => {
+const Hamburger = ({ ...props }) => {
   return (
-    <div className="hamburger">
+    <button type="button" className="hamburger" {...props}>
       <span />
       <span />
-    </div>
+    </button>
   );
 };
 

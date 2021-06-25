@@ -1,0 +1,19 @@
+.section-title {
+  @apply text-white text-2xl;
+
+  &::before {
+    @apply text-base text-accent mr-3;
+    counter-increment: section 1;
+    content: '0' counter(section) '.';
+  }
+
+  &::after {
+    content: '';
+    @apply ml-5 bg-gray;
+    display: inline-block;
+    width: 300px;
+    height: 1px;
+    position: relative;
+    top: -5px;
+  }
+}

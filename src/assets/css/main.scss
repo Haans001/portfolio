@@ -5,8 +5,10 @@
 @import 'components/hamburger';
 @import 'components/button';
 @import 'components/scroll-icon';
+@import 'components/section-title';
 
 body {
   @apply bg-page;
   font-family: 'Roboto Mono', monospace;
+  min-height: 300vh;
 }
