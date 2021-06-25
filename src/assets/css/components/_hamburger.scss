@@ -1,0 +1,17 @@
+.hamburger {
+  @apply w-10 relative;
+  cursor: pointer;
+  height: 14px;
+
+  span {
+    @apply w-full bg-white absolute left-0;
+    height: 2px;
+  }
+
+  span:first-child {
+    @apply top-0;
+  }
+  span:last-child {
+    @apply bottom-0;
+  }
+}
