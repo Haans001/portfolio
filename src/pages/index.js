@@ -1,6 +1,9 @@
 import React from 'react';
 import '@assets/css/main.scss';
 import MainLayout from '@layouts/MainLayout';
+import Button from '@components/Button';
+import Projects from '@components/Projects';
+import LinkIcon from '@assets/images/icons/iconArrow.inline.svg';
 
 const technologies = [
   'React',
@@ -13,31 +16,26 @@ const technologies = [
 
 const index = () => (
   <MainLayout>
-    <header className="max-w-7xl px-4 mx-auto">
+    <header className="min-h-screen container flex justify-center flex-col">
       <small className="uppercase text-accent text-sm">Personal Portfolio</small>
-      <h2 className="text-2xl lg:text-5xl text-white line mt-5">
+      <h2 className="text-3xl md:text-6xl lg:w-3/4 font-bold text-white line mt-5">
         I'm a developer and designer. <br />
         Is it me you looking for?
       </h2>
-      <p className="text-gray max-w-3xl mt-7">
+      <p className="text-gray md:w-1/2 mt-7">
         I'm a polish web developer and fresh graduate of technical collage on
         Computer Science profile. Currently I'm looking for internship. Get in touch
         if you are interested!
       </p>
       <div className="mt-9">
-        <a href="#work" className="button">
-          My work
-        </a>
-        <a href="#about" className="button button-accent ml-4">
+        <Button to="#work">My work</Button>
+        <Button to="#about" className="ml-4" accent>
           About me
-        </a>
-      </div>
-      <div className="grid place-content-center mt-24 lg:mt-36">
-        <div className="scroll-icon" />
+        </Button>
       </div>
     </header>
 
-    <section id="about" className="mt-36 px-4 max-w-6xl mx-auto">
+    <section id="about" className="px-4 sm:px-10 mx-auto max-w-6xl">
       <h2 className="text-xl section-title">About me</h2>
       <div className="grid grid-cols-2 mt-8">
         <div className="col-span-2 lg:col-span-1">
@@ -65,6 +63,25 @@ const index = () => (
         </div>
       </div>
     </section>
+
+    <Projects />
+
+    <footer className="mt-64 pt-24 pb-6 bg-accent-dark">
+      <div className="container">
+        <a href="#contact" className="text-white text-5xl font-bold">
+          Talk <br /> with me.
+          <LinkIcon className="w-10 h-10 mt-1" />
+        </a>
+        <p className="text-white mt-14">
+          Or email me at:
+          <br />
+          <span className="underline">rapacz2001@gmail.com</span>
+        </p>
+      </div>
+      <div className="mt-16 text-center font-bold text-white text-sm opacity-70">
+        Designed and built by Jan Rapacz
+      </div>
+    </footer>
   </MainLayout>
 );
 

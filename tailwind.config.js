@@ -9,11 +9,18 @@ module.exports = {
           DEFAULT: '#123eee',
           dark: '#03f',
         },
-        gray: '#4D4D4D',
+        gray: {
+          light: '#888888',
+          DEFAULT: '#4D4D4D',
+          dark: '#313131',
+        },
       },
       backgroundColor: {
         page: '#131313',
         card: '#161616',
+      },
+      boxShadow: {
+        DEFAULT: '0px 2px 6px rgba(0,0,0,0.26)',
       },
     },
   },

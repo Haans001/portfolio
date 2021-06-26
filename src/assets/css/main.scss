@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'components/hamburger';
-@import 'components/button';
 @import 'components/scroll-icon';
 @import 'components/section-title';
+@import 'components/container';
+@import 'components/breadcrumb';
 
 body {
   @apply bg-page;
   font-family: 'Roboto Mono', monospace;
   min-height: 300vh;
+}
+
+:root {
+  --nav-height: 80px;
+  --nav-scrolled-height: 60px;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
 }
