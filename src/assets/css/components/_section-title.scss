@@ -9,8 +9,7 @@
 
   &::after {
     content: '';
-    @apply ml-5 bg-gray;
-    display: inline-block;
+    @apply ml-5 bg-gray hidden md:block;
     width: 300px;
     height: 1px;
     position: relative;

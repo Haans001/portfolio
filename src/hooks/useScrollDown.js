@@ -6,7 +6,7 @@ const useScrollDown = () => {
   const handleScrollPostision = (e) => {
     const { scrollY } = window;
 
-    if (scrollY > 100) return setScrolled(true);
+    if (scrollY > 50) return setScrolled(true);
 
     setScrolled(false);
   };

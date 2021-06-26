@@ -37,10 +37,10 @@ const index = () => (
       </div>
     </header>
 
-    <section id="about" className="mt-36 max-w-6xl mx-auto">
+    <section id="about" className="mt-36 px-4 max-w-6xl mx-auto">
       <h2 className="text-xl section-title">About me</h2>
       <div className="grid grid-cols-2 mt-8">
-        <div>
+        <div className="col-span-2 lg:col-span-1">
           <p className="text-gray">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
             beatae laborum voluptatem earum delectus dignissimos unde molestias ad
