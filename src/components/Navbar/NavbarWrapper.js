@@ -18,17 +18,19 @@ const StyledNavbarWrapper = styled.nav`
   `}
 `;
 
-const NavbarWrapper = ({ children }) => {
+const NavbarWrapper = React.forwardRef(({ children, ...props }, ref) => {
   const [scrolled, scrollDir] = useScroll();
 
   return (
     <StyledNavbarWrapper
+      ref={ref}
+      {...props}
       hidden={scrolled && scrollDir === 'down'}
       active={scrolled && scrollDir === 'up'}
     >
       {children}
     </StyledNavbarWrapper>
   );
-};
+});
 
 export default NavbarWrapper;

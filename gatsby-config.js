@@ -27,6 +27,7 @@ module.exports = {
           '@assets': path.resolve(__dirname, 'src/assets'),
           '@hooks': path.resolve(__dirname, 'src/hooks'),
           '@layouts': path.resolve(__dirname, 'src/layouts'),
+          '@sections': path.resolve(__dirname, 'src/sections'),
         },
         extensions: [],
       },

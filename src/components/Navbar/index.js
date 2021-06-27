@@ -1,16 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Hamburger from '@components/Hamburger';
 import Button from '@components/Button';
 import FullScreenMenu from '@components/FullScreenMenu';
+import gsap from 'gsap';
 import NavbarWrapper from './NavbarWrapper';
 
 const Navbar = ({ menuItems, open, setOpen }) => {
+  const wrapper = useRef();
+  const menu = useRef();
+  const logo = useRef();
+
+  useEffect(() => {
+    gsap.set(wrapper.current, { visibility: 'visible' });
+    gsap.from(logo.current, { opacity: 0, duration: 0.2, ease: 'power4' });
+    gsap.from(menu.current.children, {
+      opacity: 0,
+      y: -20,
+      duration: 0.2,
+      stagger: 0.1,
+      ease: 'power4',
+    });
+  }, []);
+
   const Menu = () => (
     <menu className="hidden md:block m-0">
-      <ul className="flex space-x-8 text-white list-none items-center">
+      <ul ref={menu} className="flex space-x-8 text-white list-none items-center">
         {menuItems.map(({ path, name }) => (
-          <li className="text-sm hover:text-accent transition">
+          <li className="text-sm hover:text-accent transition-colors">
             <a href={path}>{name}</a>
           </li>
         ))}
@@ -20,8 +37,13 @@ const Navbar = ({ menuItems, open, setOpen }) => {
   );
 
   return (
-    <NavbarWrapper>
-      <a href="/" className="text-xl text-white">
+    <NavbarWrapper
+      style={{
+        visibility: 'hidden',
+      }}
+      ref={wrapper}
+    >
+      <a ref={logo} href="/" className="text-xl text-white">
         <span className="text-gray">jan.</span>rapacz
       </a>
       <Menu />

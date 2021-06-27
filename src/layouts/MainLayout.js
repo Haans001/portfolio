@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import '@assets/css/main.scss';
 import SEO from '@components/SEO/SEO';
 import Navbar from '@components/Navbar';
-import FullScreenMenu from '@components/FullScreenMenu';
 import styled from 'styled-components';
-import tw from 'twin.macro';
 
 const menuItems = [
   { path: '#about', name: 'About' },
