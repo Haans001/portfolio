@@ -27,7 +27,7 @@ const Navbar = ({ menuItems, open, setOpen }) => {
     <menu className="hidden md:block m-0">
       <ul ref={menu} className="flex space-x-8 text-white list-none items-center">
         {menuItems.map(({ path, name }) => (
-          <li className="text-sm hover:text-accent transition-colors">
+          <li key={name} className="text-sm hover:text-accent transition-colors">
             <a href={path}>{name}</a>
           </li>
         ))}

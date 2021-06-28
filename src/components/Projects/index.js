@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
-import ProjectCard from '@components/ProjectCard';
 import Button from '@components/Button';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import ProjectsList from './ProjectsList';
 
 const Projects = () => {
   const wrapper = useRef();
@@ -53,13 +53,7 @@ const Projects = () => {
         My projects
       </h3>
       <div ref={wrapper} className="grid md:grid-cols-2 mt-14 gap-7">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectsList />
       </div>
 
       <div ref={button} className="flex justify-center mt-14">
