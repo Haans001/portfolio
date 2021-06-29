@@ -27,13 +27,11 @@ const MainLayout = ({ children }) => {
   );
 
   return (
-    <I18nextProvider i18n={i18n}>
-      <div>
-        <SEO />
-        <Navbar menuItems={menuItems} open={open} setOpen={() => setOpen(!open)} />
-        <StyledContainer blur={open}>{children}</StyledContainer>
-      </div>
-    </I18nextProvider>
+    <div>
+      <SEO />
+      <Navbar menuItems={menuItems} open={open} setOpen={() => setOpen(!open)} />
+      <StyledContainer blur={open}>{children}</StyledContainer>
+    </div>
   );
 };
 
