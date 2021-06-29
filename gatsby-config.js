@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     title: 'Jan Rapacz Personal Portfolio',
     supportedLanguages: ['en', 'pl'],
+    defaultLanguage: ['en'],
   },
   plugins: [
     'gatsby-plugin-sass',

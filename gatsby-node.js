@@ -1,4 +1,4 @@
-const config = require('./gatsby-config');
+const languages = require('./src/config/languages.json');
 /**
  * Makes sure to create localized paths for each file in the /pages folder.
  * For example, pages/404.js will be converted to /en/404.js and /el/404.js and
@@ -17,7 +17,7 @@ exports.onCreatePage = async ({
 
   // Create one page for each locale
   await Promise.all(
-    config.siteMetadata.supportedLanguages.map(async (lang) => {
+    languages.map(async ({ lang, locale }) => {
       const localizedPath = `/${lang}${page.path}`;
 
       createRedirect({
@@ -36,6 +36,7 @@ exports.onCreatePage = async ({
           ...page.context,
           originalPath,
           lang,
+          locale,
         },
       });
     })
@@ -45,7 +46,7 @@ exports.onCreatePage = async ({
   // Accept-Language header is missing for some reason
   createRedirect({
     fromPath: originalPath,
-    toPath: `/${config.siteMetadata.defaultLanguage}${page.path}`,
+    toPath: `/${languages[0].lang}${page.path}`,
     isPermanent: false,
     redirectInBrowser: isEnvDevelopment,
     statusCode: 301,

@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import Button from '@components/Button';
+import ProjectCard from '@components/ProjectCard';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import ProjectsList from './ProjectsList';
 
-const Projects = () => {
+const Projects = ({ data }) => {
   const wrapper = useRef();
   const title = useRef();
   const button = useRef();
@@ -53,7 +53,9 @@ const Projects = () => {
         My projects
       </h3>
       <div ref={wrapper} className="grid md:grid-cols-2 mt-14 gap-7">
-        <ProjectsList />
+        {data.map((project) => (
+          <ProjectCard data={project} key={project.id} />
+        ))}
       </div>
 
       <div ref={button} className="flex justify-center mt-14">
