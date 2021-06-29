@@ -1,9 +1,5 @@
 const languages = require('./src/config/languages.json');
-/**
- * Makes sure to create localized paths for each file in the /pages folder.
- * For example, pages/404.js will be converted to /en/404.js and /el/404.js and
- * it will be accessible from https:// .../en/404/ and https:// .../el/404/
- */
+
 exports.onCreatePage = async ({
   page,
   actions: { createPage, deletePage, createRedirect },

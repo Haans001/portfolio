@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Hamburger from '@components/Hamburger';
 import Button from '@components/Button';
 import FullScreenMenu from '@components/FullScreenMenu';
+import NavigationLink from '@components/NavigationLink';
 import gsap from 'gsap';
 import NavbarWrapper from './NavbarWrapper';
 
@@ -28,7 +29,7 @@ const Navbar = ({ menuItems, open, setOpen }) => {
       <ul ref={menu} className="flex space-x-8 text-white list-none items-center">
         {menuItems.map(({ path, name }) => (
           <li key={name} className="text-sm hover:text-accent transition-colors">
-            <a href={path}>{name}</a>
+            <NavigationLink to={path}>{name}</NavigationLink>
           </li>
         ))}
         <Button accent>Resume</Button>

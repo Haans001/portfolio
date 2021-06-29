@@ -8,9 +8,11 @@ import Hero from '@sections/Hero';
 import About from '@sections/About';
 import Footer from '@sections/Footer';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import gsap from 'gsap';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 const index = ({ data: { allContentfulProject: nodes } }) => {
   return (

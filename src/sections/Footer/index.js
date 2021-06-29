@@ -4,7 +4,7 @@ import GithubIcon from '@assets/images/icons/iconGithub.inline.svg';
 
 const Footer = () => {
   return (
-    <footer className="mt-64 pt-24 pb-6 bg-accent-dark">
+    <footer id="contact" className="mt-64 pt-24 pb-6 bg-accent-dark">
       <div className="container flex flex-col md:flex-row justify-between">
         <div>
           <a href="#contact" className="text-white text-5xl font-bold">

@@ -48,7 +48,7 @@ const Projects = ({ data }) => {
   }, []);
 
   return (
-    <section className="mt-80 container">
+    <section className="mt-80 container" id="work">
       <h3 ref={title} className="section-title">
         My projects
       </h3>
