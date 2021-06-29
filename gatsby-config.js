@@ -7,6 +7,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'Jan Rapacz Personal Portfolio',
+    supportedLanguages: ['en', 'pl'],
   },
   plugins: [
     'gatsby-plugin-sass',

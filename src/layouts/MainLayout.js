@@ -4,6 +4,8 @@ import '@assets/css/main.scss';
 import SEO from '@components/SEO/SEO';
 import Navbar from '@components/Navbar';
 import styled from 'styled-components';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../config/i18next';
 
 const menuItems = [
   { path: '#about', name: 'About' },
@@ -25,11 +27,13 @@ const MainLayout = ({ children }) => {
   );
 
   return (
-    <div>
-      <SEO />
-      <Navbar menuItems={menuItems} open={open} setOpen={() => setOpen(!open)} />
-      <StyledContainer blur={open}>{children}</StyledContainer>
-    </div>
+    <I18nextProvider i18n={i18n}>
+      <div>
+        <SEO />
+        <Navbar menuItems={menuItems} open={open} setOpen={() => setOpen(!open)} />
+        <StyledContainer blur={open}>{children}</StyledContainer>
+      </div>
+    </I18nextProvider>
   );
 };
 
