@@ -2,18 +2,24 @@ import React from 'react';
 import LinkIcon from '@assets/images/icons/iconArrow.inline.svg';
 import GithubIcon from '@assets/images/icons/iconGithub.inline.svg';
 import NavigationLink from '@components/NavigationLink';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation(['footer']);
+
   return (
     <footer id="contact" className="mt-64 pt-24 pb-6 bg-accent-dark">
       <div className="container flex flex-col md:flex-row justify-between">
         <div>
-          <a href="#contact" className="text-white text-5xl font-bold">
-            Talk <br /> with me.
+          <a
+            href="#contact"
+            className="text-white text-5xl font-bold whitespace-pre-line"
+          >
+            {t('footer:title')}
             <LinkIcon className="w-10 h-10 mt-1" />
           </a>
           <p className="text-white mt-7 md:mt-14">
-            Or email me at:
+            {t('footer:email')}:
             <br />
             <span className="underline">rapacz2001@gmail.com</span>
           </p>
@@ -37,7 +43,7 @@ const Footer = () => {
       </div>
 
       <div className="mt-16 text-center font-bold text-white text-sm opacity-70">
-        Designed and built by Jan Rapacz
+        {t('footer:creator')}
       </div>
     </footer>
   );

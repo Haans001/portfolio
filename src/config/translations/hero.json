@@ -1,0 +1,18 @@
+{
+  "en": {
+    "resume": "Resume",
+    "title-1": "Hi,I'm Jasiek!",
+    "title-2": "I like to design and code.",
+    "description": "I'm a polish web developer and fresh graduate of technical collage on Computer Science profile. Currently I'm looking for internship. Get in touch if you are interested!",
+    "my-work": "My Work",
+    "about-me": "About me"
+  },
+  "pl": {
+    "resume": "CV",
+    "title-1": "Cześć, tu Jasiek!",
+    "title-2": "Lubię projektować i programować.",
+    "description": "Jestem web developerem który właśnie ukończył technikum o profilu informatycznym. Obecnie szukam pracy. Daj znać jeżeli jesteś zainteresowany współpracą!",
+    "my-work": "Projekty",
+    "about-me": "O mnie"
+  }
+}

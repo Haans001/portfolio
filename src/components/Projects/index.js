@@ -4,11 +4,14 @@ import Button from '@components/Button';
 import ProjectCard from '@components/ProjectCard';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 const Projects = ({ data }) => {
   const wrapper = useRef();
   const title = useRef();
   const button = useRef();
+
+  const { t } = useTranslation(['projects']);
 
   useEffect(() => {
     gsap.set(wrapper.current.children, { opacity: 0 });
@@ -51,7 +54,7 @@ const Projects = ({ data }) => {
   return (
     <section className="mt-80 container" id="work">
       <h3 ref={title} className="section-title">
-        My projects
+        {t('projects:title')}
       </h3>
       <div ref={wrapper} className="grid md:grid-cols-2 mt-14 gap-7">
         {data.map((project) => (
@@ -60,7 +63,7 @@ const Projects = ({ data }) => {
       </div>
 
       <div ref={button} className="flex justify-center mt-14">
-        <Button large>See my github</Button>
+        <Button large>{t('projects:github')}</Button>
       </div>
     </section>
   );

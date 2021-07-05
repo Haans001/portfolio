@@ -14,7 +14,7 @@ const Navbar = ({ menuItems, open, setOpen }) => {
   const menu = useRef();
   const logo = useRef();
 
-  const { t } = useTranslation();
+  const { t } = useTranslation(['hero']);
 
   useEffect(() => {
     setTimeout(() => {

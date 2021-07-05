@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "About me",
+    "description-1": "Hello, my name is Jasiek and I like to create things around web and computers. My coding adventure started few years ago when I was learning Java language at school - programming was definetly my favourite subject. I really enjoyed creating console apps and 2D games from scratch.",
+    "description-2": "In the final year of technical college I got into web development. Soon creating websites and playing with API's turned out to be great way to kill boredom, and shortly after became my passion which I'm going to develop.",
+    "description-3": "Here is the list of technologies that I have experience with"
+  },
+  "pl": {
+    "title": "O mnie",
+    "description-1": "Hej, mam na imię Jasiek i lubie tworzyć rzeczy związane z internetem i komputerami. Moja przygoda z kodowaniem zaczęła się pare lat temu na lekcjach programowania w języku Java - z pewnością mogę powiedzieć że był to mój ulubiony przedmiot. Tworzenie programów konsolowych i gier 2D od zera sprawiało mi dużą frajdę.",
+    "description-2": "Pod koniec nauki w technikum zainteresowałem się programowaniem webowym. Tworzenie stron, portali lub zabawa z użyciem publicznych API okazały się sposobem na nude a wkrótce potem zostały moją pasją którą zamieżam ciągle rozwijać.",
+    "description-3": "Oto lista technologi z którymi już pracowałem"
+  }
+}

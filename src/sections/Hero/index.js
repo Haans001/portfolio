@@ -29,21 +29,17 @@ const Hero = () => {
       }}
     >
       <small className="uppercase text-accent text-sm">Personal Portfolio</small>
-      <h2 className="text-3xl md:text-5xl 3xl:text-6xl lg:w-3/4 font-bold text-white line mt-5">
+      <h2 className="text-3xl md:text-5xl 3xl:text-6xl font-bold text-white line mt-5">
         {t('hero:title-1')}
       </h2>
-      <h2 className="text-3xl md:text-5xl 3xl:text-6xl lg:w-3/4 font-bold text-white line">
-        Is it me you looking for?
+      <h2 className="text-3xl md:text-5xl 3xl:text-6xl font-bold text-white line">
+        {t('hero:title-2')}
       </h2>
-      <p className="text-gray md:w-1/2 mt-7">
-        I'm a polish web developer and fresh graduate of technical collage on
-        Computer Science profile. Currently I'm looking for internship. Get in touch
-        if you are interested!
-      </p>
+      <p className="text-gray md:w-1/2 mt-7">{t('hero:description')}</p>
       <div className="mt-9">
-        <Button to="#work">My work</Button>
+        <Button to="#work">{t('hero:my-work')}</Button>
         <Button to="#about" className="ml-4" accent>
-          About me
+          {t('hero:about-me')}
         </Button>
       </div>
     </section>

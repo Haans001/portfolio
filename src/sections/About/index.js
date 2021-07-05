@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import { useTranslation } from 'react-i18next';
 
 const technologies = [
   'React',
@@ -12,6 +13,8 @@ const technologies = [
 
 const About = () => {
   const wrapper = useRef();
+
+  const { t } = useTranslation(['about']);
 
   useEffect(() => {
     gsap.from(wrapper.current.children, {
@@ -29,23 +32,12 @@ const About = () => {
 
   return (
     <section ref={wrapper} id="about" className="px-4 sm:px-10 mx-auto max-w-6xl">
-      <h2 className="text-xl section-title">About me</h2>
+      <h2 className="text-xl section-title">{t('about:title')}</h2>
       <div className="grid grid-cols-2 mt-8">
         <div className="col-span-2 lg:col-span-1">
-          <p className="text-gray">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
-            beatae laborum voluptatem earum delectus dignissimos unde molestias ad
-            libero cum, expedita fugiat velit veritatis adipisci voluptates
-            praesentium obcaecati perferendis, sequi quos dolorum explicabo sed?
-          </p>
-          <p className="text-gray mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-            quasi expedita laborum ab? Vitae repellat eveniet beatae. Ducimus ex
-            dolor, aliquid expedita iusto recusandae.
-          </p>
-          <p className="text-accent mt-5">
-            Here is the list of technologies that I have experience with:
-          </p>
+          <p className="text-gray">{t('about:description-1')}</p>
+          <p className="text-gray mt-3">{t('about:description-2')}</p>
+          <p className="text-accent mt-5">{t('about:description-3')}:</p>
           <ul className="mt-4 grid grid-cols-2 gap-2">
             {technologies.map((technology) => (
               <li className="text-sm text-white" key={technology}>
