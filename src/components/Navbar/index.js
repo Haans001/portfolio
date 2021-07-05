@@ -17,15 +17,17 @@ const Navbar = ({ menuItems, open, setOpen }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    gsap.set(wrapper.current, { visibility: 'visible' });
-    gsap.from(logo.current, { opacity: 0, duration: 0.2, ease: 'power4' });
-    gsap.from(menu.current.children, {
-      opacity: 0,
-      y: -20,
-      duration: 0.2,
-      stagger: 0.1,
-      ease: 'power4',
-    });
+    setTimeout(() => {
+      gsap.set(wrapper.current, { visibility: 'visible' });
+      gsap.from(menu.current.children, {
+        opacity: 0,
+        y: -20,
+        duration: 0.2,
+        stagger: 0.1,
+        ease: 'power4',
+      });
+      gsap.from(logo.current, { opacity: 0, duration: 0.2, ease: 'power4' });
+    }, 100);
   }, []);
 
   const Menu = () => (
@@ -54,7 +56,7 @@ const Navbar = ({ menuItems, open, setOpen }) => {
       }}
       ref={wrapper}
     >
-      <a ref={logo} href="/" className="text-xl text-white">
+      <a ref={logo} href="/" className="text-xl text-white block">
         <span className="text-gray">jan.</span>rapacz
       </a>
       <Menu />

@@ -7,7 +7,6 @@ export const PageContextProvider = ({ value: { lang }, children }) => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    console.log(lang);
     i18n.changeLanguage(lang);
   }, [lang]);
 

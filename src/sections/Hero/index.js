@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const Hero = () => {
   const wrapper = useRef();
 
-  const { t } = useTranslation();
+  const { t } = useTranslation(['hero']);
 
   useEffect(() => {
     gsap.set(wrapper.current, { visibility: 'visible' });
@@ -30,7 +30,7 @@ const Hero = () => {
     >
       <small className="uppercase text-accent text-sm">Personal Portfolio</small>
       <h2 className="text-3xl md:text-5xl 3xl:text-6xl lg:w-3/4 font-bold text-white line mt-5">
-        {t('hero__title_1')}
+        {t('hero:title-1')}
       </h2>
       <h2 className="text-3xl md:text-5xl 3xl:text-6xl lg:w-3/4 font-bold text-white line">
         Is it me you looking for?

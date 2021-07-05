@@ -1,14 +1,14 @@
 {
   "en": {
-    "translation": {
+    "hero": {
       "resume": "Resume",
-      "hero__title_1": "I'm a developer and designer"
+      "title-1": "Hi,I'm Jasiek!"
     }
   },
   "pl": {
-    "translation": {
+    "hero": {
       "resume": "CV",
-      "hero__title_1": "Jestem developerem i designerem"
+      "title-1": "Cześć, tu Jasiek!"
     }
   }
 }
