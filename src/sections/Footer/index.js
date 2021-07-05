@@ -1,6 +1,7 @@
 import React from 'react';
 import LinkIcon from '@assets/images/icons/iconArrow.inline.svg';
 import GithubIcon from '@assets/images/icons/iconGithub.inline.svg';
+import NavigationLink from '@components/NavigationLink';
 
 const Footer = () => {
   return (
@@ -21,14 +22,14 @@ const Footer = () => {
           <h2 className="text-2xl font-bold text-white">Menu</h2>
           <ul>
             <li className="text-white opacity-70 md:text-right">
-              <a href="">About</a>
+              <NavigationLink to="#about">About</NavigationLink>
             </li>
             <li className="text-white opacity-70 md:text-right">
-              <a href="">Work</a>
+              <NavigationLink to="#work">Work</NavigationLink>
             </li>
           </ul>
           <div className="flex md:justify-end mt-4">
-            <a href="">
+            <a href="https://github.com/Haans001" target="_blank" rel="noreferrer">
               <GithubIcon />
             </a>
           </div>

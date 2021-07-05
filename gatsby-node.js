@@ -44,7 +44,7 @@ exports.onCreatePage = async ({
     fromPath: originalPath,
     toPath: `/${languages[0].lang}${page.path}`,
     isPermanent: false,
-    redirectInBrowser: isEnvDevelopment,
+    redirectInBrowser: true,
     statusCode: 301,
   });
 };

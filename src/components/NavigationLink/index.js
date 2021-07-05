@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import gsap from 'gsap';
 
 const NavigationLink = ({ to, children, ...props }) => {
@@ -10,6 +12,12 @@ const NavigationLink = ({ to, children, ...props }) => {
       {children}
     </button>
   );
+};
+
+NavigationLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
+    .isRequired,
 };
 
 export default NavigationLink;

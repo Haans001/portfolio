@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import tw from 'twin.macro';
 
@@ -54,6 +55,10 @@ const Hamburger = ({ open, ...props }) => {
       </StyledHamburgerBox>
     </StyledHamburger>
   );
+};
+
+Hamburger.propTypes = {
+  open: PropTypes.bool.isRequired,
 };
 
 export default Hamburger;

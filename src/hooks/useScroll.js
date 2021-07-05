@@ -7,15 +7,20 @@ const useScroll = () => {
 
   // /** CHECKS SCROLL DIRECTION */
 
+  const handleScroll = function () {
+    if (this.prev > window.scrollY) {
+      setScrollDir('up');
+    } else if (this.prev < window.scrollY) {
+      setScrollDir('down');
+    }
+    this.prev = window.scrollY;
+  };
+
   useEffect(() => {
-    window.addEventListener('scroll', function () {
-      if (this.prev > window.scrollY) {
-        setScrollDir('up');
-      } else if (this.prev < window.scrollY) {
-        setScrollDir('down');
-      }
-      this.prev = window.scrollY;
-    });
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   /** CHECKS IF USER SCROLLED DOWN UNDER SOME TRESHOLD */

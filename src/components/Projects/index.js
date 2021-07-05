@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import Button from '@components/Button';
 import ProjectCard from '@components/ProjectCard';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import PropTypes from 'prop-types';
 
 const Projects = ({ data }) => {
   const wrapper = useRef();
@@ -63,6 +64,10 @@ const Projects = ({ data }) => {
       </div>
     </section>
   );
+};
+
+Projects.propTypes = {
+  data: PropTypes.arrayOf().isRequired,
 };
 
 export default Projects;

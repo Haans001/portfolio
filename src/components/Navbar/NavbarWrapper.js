@@ -1,5 +1,6 @@
 import React from 'react';
 import useScroll from '@hooks/useScroll';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
@@ -32,5 +33,10 @@ const NavbarWrapper = React.forwardRef(({ children, ...props }, ref) => {
     </StyledNavbarWrapper>
   );
 });
+
+NavbarWrapper.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
+    .isRequired,
+};
 
 export default NavbarWrapper;

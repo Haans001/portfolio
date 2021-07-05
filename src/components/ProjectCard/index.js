@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import GithubIcon from '@assets/images/icons/iconGithub.inline.svg';
 import LinkIcon from '@assets/images/icons/iconLink.inline.svg';
 
@@ -34,6 +35,18 @@ const ProjectCard = ({ data }) => {
       </div>
     </div>
   );
+};
+
+ProjectCard.propTypes = {
+  data: PropTypes.objectOf({
+    title: PropTypes.string,
+    githubUrl: PropTypes.string,
+    projectUrl: PropTypes.string,
+    subtitle: PropTypes.string,
+    description: PropTypes.objectOf({
+      description: PropTypes.string,
+    }),
+  }).isRequired,
 };
 
 export default ProjectCard;
