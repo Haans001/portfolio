@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import '@assets/css/main.scss';
 import SEO from '@components/SEO/SEO';
 import Navbar from '@components/Navbar';
+import Footer from '@components/Footer';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
@@ -44,6 +45,7 @@ const MainLayout = ({ children }) => {
         setOpen={() => setOpen(!open)}
       />
       <StyledContainer blur={open}>{children}</StyledContainer>
+      <Footer menuItems={menuItems[language]} />
     </div>
   );
 };
