@@ -9,7 +9,7 @@ import gsap from 'gsap';
 import { useTranslation } from 'react-i18next';
 import NavbarWrapper from './NavbarWrapper';
 
-const Navbar = ({ menuItems, open, setOpen }) => {
+const Navbar = ({ menuItems, open, setOpen, resumeUrl }) => {
   const wrapper = useRef();
   const menu = useRef();
   const logo = useRef();
@@ -43,7 +43,9 @@ const Navbar = ({ menuItems, open, setOpen }) => {
           </li>
         ))}
         <li>
-          <Button accent>{t('resume')}</Button>
+          <Button href={resumeUrl} accent>
+            {t('resume')}
+          </Button>
         </li>
       </ul>
     </menu>
@@ -70,6 +72,7 @@ Navbar.propTypes = {
   menuItems: PropTypes.arrayOf(PropTypes.object).isRequired,
   open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
+  resumeUrl: PropTypes.string.isRequired,
 };
 
 export default Navbar;

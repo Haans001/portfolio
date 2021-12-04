@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import '@assets/css/main.scss';
 import SEO from '@components/SEO/SEO';
@@ -22,7 +22,7 @@ const menuItems = {
 
 const StyledContainer = styled.main(({ blur }) => [blur && `filter: blur(2px)`]);
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ resumeUrl, children }) => {
   const [open, setOpen] = useState(false);
   const {
     i18n: { language },
@@ -43,6 +43,7 @@ const MainLayout = ({ children }) => {
         menuItems={menuItems[language]}
         open={open}
         setOpen={() => setOpen(!open)}
+        resumeUrl={resumeUrl}
       />
       <StyledContainer blur={open}>{children}</StyledContainer>
       <Footer menuItems={menuItems[language]} />
@@ -53,6 +54,7 @@ const MainLayout = ({ children }) => {
 MainLayout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
     .isRequired,
+  resumeUrl: PropTypes.string.isRequired,
 };
 
 export default MainLayout;

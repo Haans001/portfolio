@@ -12,9 +12,9 @@ import gsap from 'gsap';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
-const index = ({ data: { allContentfulProject: nodes } }) => {
+const index = ({ data: { allContentfulProject: nodes, allFile } }) => {
   return (
-    <MainLayout>
+    <MainLayout resumeUrl={allFile.edges[0].node.publicURL}>
       <Hero />
       <About />
       <Projects data={nodes.nodes} />
@@ -36,6 +36,14 @@ export const query = graphql`
         githubUrl
         id
         node_locale
+      }
+    }
+
+    allFile(filter: { extension: { eq: "pdf" } }) {
+      edges {
+        node {
+          publicURL
+        }
       }
     }
   }
