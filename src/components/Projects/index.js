@@ -63,7 +63,9 @@ const Projects = ({ data }) => {
       </div>
 
       <div ref={button} className="flex justify-center mt-14">
-        <Button large>{t('projects:github')}</Button>
+        <Button href="https://github.com/Haans001" large>
+          {t('projects:github')}
+        </Button>
       </div>
     </section>
   );

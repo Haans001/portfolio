@@ -26,14 +26,8 @@ const Footer = ({ menuItems }) => {
           </p>
         </div>
         <menu className="p-0 mt-20 md:mt-0">
-          <h2 className="text-2xl font-bold text-white text-right">Menu</h2>
+          <h2 className="text-2xl font-bold text-white md:text-right">Menu</h2>
           <ul>
-            {/* <li className="text-white opacity-70 md:text-right">
-              <NavigationLink to="#about">About</NavigationLink>
-            </li>
-            <li className="text-white opacity-70 md:text-right">
-              <NavigationLink to="#work">Work</NavigationLink>
-            </li> */}
             {menuItems.map(({ name, path }) => (
               <li className="text-white opacity-70 md:text-right">
                 <NavigationLink to={path}>{name}</NavigationLink>
