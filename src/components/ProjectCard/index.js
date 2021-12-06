@@ -4,9 +4,10 @@ import GithubIcon from '@assets/images/icons/iconGithub.inline.svg';
 import LinkIcon from '@assets/images/icons/iconLink.inline.svg';
 
 const ProjectCard = ({ data }) => {
+  console.log(data);
   return (
-    <div>
-      <div className="bg-card shadow p-6 transform hover:-translate-y-3 transition-transform duration-300">
+    <div className="contents">
+      <div className="bg-card shadow p-6 transform hover:-translate-y-3 transition-transform duration-300 flex flex-col">
         <header>
           <div className="flex justify-between">
             <h2 className="text-xl text-white">{data.title}</h2>
@@ -26,11 +27,13 @@ const ProjectCard = ({ data }) => {
           </div>
           <h2 className="text-xs text-accent uppercase">{data.subtitle}</h2>
         </header>
-        <p className="mt-6 text-gray text-sm">{data.description.description}</p>
+        <p className="mt-6 text-gray text-sm flex-grow">
+          {data.description.description}
+        </p>
         <footer className="mt-6 flex space-x-4">
-          <div className="breadcrumb">Laravel</div>
-          <div className="breadcrumb">Mysql</div>
-          <div className="breadcrumb">Vue</div>
+          {data.stack.map((item) => (
+            <div className="breadcrumb">{item}</div>
+          ))}
         </footer>
       </div>
     </div>

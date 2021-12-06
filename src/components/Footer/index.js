@@ -13,8 +13,8 @@ const Footer = ({ menuItems }) => {
       <div className="container flex flex-col md:flex-row justify-between">
         <div>
           <a
-            href="#contact"
-            className="text-white text-5xl font-bold whitespace-pre-line"
+            href="mailto:rapacz2001@gmail.com"
+            className="text-white text-5xl font-bold whitespace-pre-line no-underline border-b-4 border-transparent hover:border-white"
           >
             {t('footer:title')}
             <LinkIcon className="w-10 h-10 mt-1" />

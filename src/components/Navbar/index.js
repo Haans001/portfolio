@@ -34,7 +34,19 @@ const Navbar = ({ menuItems, open, setOpen, resumeUrl }) => {
     <menu className="hidden md:block m-0">
       <ul ref={menu} className="flex space-x-8 text-white list-none items-center">
         <li className="text-gray text-xs">
-          <Link to="/en">ENG</Link>/<Link to="/pl">PL</Link>
+          <Link
+            className="no-underline border-b border-transparent hover:border-gray"
+            to="/en"
+          >
+            ENG
+          </Link>
+          /
+          <Link
+            className="no-underline border-b border-transparent hover:border-gray"
+            to="/pl"
+          >
+            PL
+          </Link>
         </li>
 
         {menuItems.map(({ path, name }) => (

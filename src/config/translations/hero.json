@@ -3,15 +3,15 @@
     "resume": "Resume",
     "title-1": "Hi,I'm Jasiek!",
     "title-2": "I like to design and code.",
-    "description": "I'm a polish web developer and fresh graduate of technical collage on Computer Science profile. Currently I'm looking for internship. Get in touch if you are interested!",
+    "description": "I'm a web developer and Computer Science student, currently based in Katowice, Poland. I like to create websites and web apps.",
     "my-work": "My Work",
     "about-me": "About me"
   },
   "pl": {
-    "resume": "CV",
+    "resume": "Pobierz CV",
     "title-1": "Cześć, tu Jasiek!",
     "title-2": "Lubię projektować i programować.",
-    "description": "Jestem web developerem który właśnie ukończył technikum o profilu informatycznym. Obecnie szukam pracy. Daj znać jeżeli jesteś zainteresowany współpracą!",
+    "description": "Jestem web developerem i studentem pierwszego roku informatyki. Obecnie mieszkam w Katowicach. Lubię tworzyć strony i aplikację internetowe.",
     "my-work": "Projekty",
     "about-me": "O mnie"
   }
